@@ -109,6 +109,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DomainModel\FoodTable.cs" />
+    <Compile Include="Models\Repository\Repository.cs" />
+    <Compile Include="Models\Service\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -123,8 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Repository\" />
-    <Folder Include="Models\Service\" />
     <Folder Include="Views\Food\" />
   </ItemGroup>
   <PropertyGroup>
