@@ -14,12 +14,6 @@ namespace Tedliu.MVC.Controllers
             return View();
         }
 
-        // GET: Food/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
         // GET: Food/Create
         public ActionResult Create()
         {
