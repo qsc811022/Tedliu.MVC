@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -23,6 +24,8 @@ namespace Tedliu.MVC.Models.Repository
 
     public class Repository : IRepository
     {
+        public string sql = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
+
         public void Create(FoodTable model)
         {
             throw new NotImplementedException();
