@@ -68,7 +68,7 @@ namespace Tedliu.MVC.Controllers
         public ActionResult Delete(int id)
         {
             var data = service.getid(id);
-            return View();
+            return View(data);
         }
 
         // POST: Food/Delete/5

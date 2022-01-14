@@ -72,7 +72,7 @@ namespace Tedliu.MVC.Models.Repository
             using (var conn = new SqlConnection(sql))
             {
                 var sql = $"Delete From {Table} where id=@id";
-                conn.Execute(sql);
+                conn.Execute(sql,new{ id});
             }
         }
     }
