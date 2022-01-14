@@ -46,7 +46,12 @@ namespace Tedliu.MVC.Models.Repository
 
         public List<FoodTable> getall()
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(sql))
+            {
+                var sql = $"select * From {Table}";
+                return conn.Query<FoodTable>(sql).ToList();
+
+            }
         }
 
         public List<FoodTable> getId(int id)
