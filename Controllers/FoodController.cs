@@ -50,12 +50,12 @@ namespace Tedliu.MVC.Controllers
 
         // POST: Food/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, FormCollection collection,FoodTable model)
         {
             try
             {
                 // TODO: Add update logic here
-                service.Edit(id);
+                service.Edit(id,model);
                 return RedirectToAction("Index");
             }
             catch

@@ -26,9 +26,9 @@ namespace Tedliu.MVC.Models.Service
             return repo.getId(id);
         }
 
-        public List<FoodTable> Edit(int id)
+        public IEnumerable<FoodTable> Edit(int id,FoodTable model)
         {
-            return repo.Edit(id);
+            return repo.Edit(id,model);
         }
     }
 }

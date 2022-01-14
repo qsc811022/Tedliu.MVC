@@ -14,7 +14,7 @@ namespace Tedliu.MVC.Models.Repository
     {
         void Create(FoodTable model);
 
-        List<FoodTable>Edit(int id);
+        IEnumerable<FoodTable>Edit(int id,FoodTable model);
 
         List<FoodTable> getall();
 
@@ -39,12 +39,12 @@ namespace Tedliu.MVC.Models.Repository
             }
         }
 
-        public List<FoodTable> Edit(int id)
+        public IEnumerable<FoodTable> Edit(int id,FoodTable model)
         {
             using (var conn = new SqlConnection(sql))
             {
                 var sql = $"Update set {Table} FoodName=@FoodName,FoodPrice=@FoodPrice,dep=@dep,Name=@Name where id=@id";
-                return conn.Query<FoodTable>(sql,new{id}).ToList();
+                return conn.Query<FoodTable>(sql,model);
 
             }
         }
@@ -64,7 +64,7 @@ namespace Tedliu.MVC.Models.Repository
             using (var conn = new SqlConnection(sql))
             {
                 var sql = $"select * From {Table} where id =@id";
-                return conn.Query<FoodTable>(sql).ToList();
+                return conn.Query<FoodTable>(sql,new{id }).ToList();
 
             }
         }
