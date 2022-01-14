@@ -20,5 +20,10 @@ namespace Tedliu.MVC.Models.Service
         {
             return repo.getall();
         }
+
+        public List<FoodTable> getid(int id)
+        {
+            return repo.getId(id);
+        }
     }
 }
