@@ -21,14 +21,14 @@ namespace Tedliu.MVC.Models.Service
             return repo.getall();
         }
 
-        public List<FoodTable> getid(int id)
+        public FoodTable getid(int id)
         {
             return repo.getId(id);
         }
 
-        public IEnumerable<FoodTable> Edit(int id,FoodTable model)
+        public void Edit(int id,FoodTable model)
         {
-            return repo.Edit(id,model);
+           repo.Edit(id,model);
         }
     }
 }
