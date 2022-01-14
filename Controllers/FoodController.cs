@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+
+using Tedliu.MVC.Models.DomainModel;
 using Tedliu.MVC.Models.Service;
 
 namespace Tedliu.MVC.Controllers
@@ -25,12 +27,12 @@ namespace Tedliu.MVC.Controllers
 
         // POST: Food/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(FoodTable Model)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                service.Create(Model);
                 return RedirectToAction("Index");
             }
             catch
