@@ -109,7 +109,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DomainModel\FoodTable.cs" />
-    <Compile Include="Models\Repository\Repository.cs" />
+    <Compile Include="Models\Repository\FoodRepository.cs" />
     <Compile Include="Models\Service\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

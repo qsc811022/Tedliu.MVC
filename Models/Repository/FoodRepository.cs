@@ -24,7 +24,7 @@ namespace Tedliu.MVC.Models.Repository
 
     }
 
-    public class Repository : IRepository
+    public class FoodRepository : IRepository
     {
         public string sql = ConfigurationManager.ConnectionStrings["DB"].ConnectionString;
         private string Table = "FoodTable";
