@@ -121,6 +121,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
+    <Content Include="Views\Food\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -44,7 +44,8 @@ namespace Tedliu.MVC.Controllers
         // GET: Food/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var data = service.getid(id);
+            return View(data);
         }
 
         // POST: Food/Edit/5
@@ -54,7 +55,7 @@ namespace Tedliu.MVC.Controllers
             try
             {
                 // TODO: Add update logic here
-
+                service.Edit(id);
                 return RedirectToAction("Index");
             }
             catch
