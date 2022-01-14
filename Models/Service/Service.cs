@@ -30,5 +30,10 @@ namespace Tedliu.MVC.Models.Service
         {
            repo.Edit(id,model);
         }
+
+        public void Delete(int id)
+        {
+            repo.Delete(id);
+        }
     }
 }

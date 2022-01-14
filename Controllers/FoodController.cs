@@ -67,6 +67,7 @@ namespace Tedliu.MVC.Controllers
         // GET: Food/Delete/5
         public ActionResult Delete(int id)
         {
+            var data = service.getid(id);
             return View();
         }
 
@@ -77,7 +78,7 @@ namespace Tedliu.MVC.Controllers
             try
             {
                 // TODO: Add delete logic here
-
+                service.Delete(id);
                 return RedirectToAction("Index");
             }
             catch

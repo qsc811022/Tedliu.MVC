@@ -122,6 +122,7 @@
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
     <Content Include="Views\Food\Edit.cshtml" />
+    <Content Include="Views\Food\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

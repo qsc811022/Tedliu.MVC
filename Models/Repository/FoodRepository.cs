@@ -45,7 +45,6 @@ namespace Tedliu.MVC.Models.Repository
             {
                 var sql = $"Update {Table} set FoodName=@FoodName,FoodPrice=@FoodPrice,dep=@dep,Name=@Name where id=@id";
                 conn.Execute(sql, model);
-
             }
         }
 
@@ -65,13 +64,16 @@ namespace Tedliu.MVC.Models.Repository
             {
                 var sql = $"select * From {Table} where id =@id";
                 return conn.QuerySingleOrDefault<FoodTable>(sql,new{id});
-
             }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(sql))
+            {
+                var sql = $"Delete From {Table} where id=@id";
+                conn.Execute(sql);
+            }
         }
     }
 }
