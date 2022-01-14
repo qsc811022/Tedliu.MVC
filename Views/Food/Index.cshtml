@@ -1,14 +1,12 @@
 ﻿@model IEnumerable<Tedliu.MVC.Models.DomainModel.FoodTable>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "訂便當列表";
 }
 
-<h2>Index</h2>
+<h2>訂便當列表</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -41,9 +39,9 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("修改訂購品項", "Edit", new { id=item.id }) |
       
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            @Html.ActionLink("刪除訂購品項", "Delete", new { id=item.id })
         </td>
     </tr>
 }
