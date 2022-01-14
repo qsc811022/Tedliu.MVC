@@ -14,13 +14,13 @@ namespace Tedliu.MVC.Models.Repository
     {
         void Create(FoodTable model);
 
-        void Edit(int id);
+        List<FoodTable>Edit(int id, FoodTable model);
 
         List<FoodTable> getall();
 
         List<FoodTable> getId(int id);
 
-        void Update(int id,FoodTable model);
+        void Delete(int id);
 
     }
 
@@ -39,9 +39,14 @@ namespace Tedliu.MVC.Models.Repository
             }
         }
 
-        public void Edit(int id)
+        public List<FoodTable> Edit(int id, FoodTable model)
         {
-            throw new NotImplementedException();
+            using (var conn = new SqlConnection(sql))
+            {
+                var sql = $"Update set {Table} FoodName=@FoodName,FoodPrice=@FoodPrice,dep=@dep,Name=@Name where id=@id";
+                return conn.Query<FoodTable>(sql,model).ToList();
+
+            }
         }
 
         public List<FoodTable> getall()
@@ -64,7 +69,7 @@ namespace Tedliu.MVC.Models.Repository
             }
         }
 
-        public void Update(int id, FoodTable model)
+        public void Delete(int id)
         {
             throw new NotImplementedException();
         }
