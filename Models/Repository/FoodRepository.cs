@@ -43,7 +43,7 @@ namespace Tedliu.MVC.Models.Repository
         {
             using (var conn = new SqlConnection(sql))
             {
-                var sql = $"Update set {Table} FoodName=@FoodName,FoodPrice=@FoodPrice,dep=@dep,Name=@Name where id=@id";
+                var sql = $"Update {Table} set FoodName=@FoodName,FoodPrice=@FoodPrice,dep=@dep,Name=@Name where id=@id";
                 conn.Execute(sql, model);
 
             }
