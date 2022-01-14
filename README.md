@@ -7,8 +7,8 @@
 
 #USE [DemoProject]
 #GO
-#/****** Object:  Table [dbo].[FoodTable]    Script Date: 2022/1/14 下午 12:36:21 ******/
-#SET ANSI_NULLS ON
+# /****** Object:  Table [dbo].[FoodTable]    Script Date: 2022/1/14 下午 12:36:21 ******/
+# SET ANSI_NULLS ON
 #GO
 #SET QUOTED_IDENTIFIER ON
 #GO
