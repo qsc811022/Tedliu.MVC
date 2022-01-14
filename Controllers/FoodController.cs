@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Tedliu.MVC.Models.Service;
 
 namespace Tedliu.MVC.Controllers
 {
     public class FoodController : Controller
     {
+        Service service = new Service();
         // GET: Food
         public ActionResult Index()
         {
-            return View();
+            var data = service.getll();
+            return View(data);
         }
 
         // GET: Food/Create

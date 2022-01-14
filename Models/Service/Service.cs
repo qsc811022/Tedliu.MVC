@@ -15,5 +15,10 @@ namespace Tedliu.MVC.Models.Service
         {
             repo.Create(Model);
         }
+
+        public List<FoodTable> getll()
+        {
+            return repo.getall();
+        }
     }
 }
